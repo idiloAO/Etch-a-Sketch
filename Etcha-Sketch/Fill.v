@@ -6,7 +6,7 @@ module fill
 		// Your inputs and outputs here
 		SW,
 		KEY,							// On Board Keys
-		// The ports below are for the VGA output.  Do not change.
+		// The ports below are for the VGA output.  
 		VGA_CLK,   						//	VGA Clock
 		VGA_HS,							//	VGA H_SYNC
 		VGA_VS,							//	VGA V_SYNC
@@ -22,7 +22,7 @@ module fill
 	input [3:0] SW;
 	
 	// Declare your inputs and outputs here
-	// Do not change the following outputs
+	
 	output			VGA_CLK;   				//	VGA Clock
 	output			VGA_HS;					//	VGA H_SYNC
 	output			VGA_VS;					//	VGA V_SYNC
@@ -46,8 +46,7 @@ module fill
 	
 	assign colour = 3'b111;
 
-	// Create an Instance of a VGA controller - there can be only one!
-	// Define the number of colours as well as the initial background
+	
 	// image file (.MIF) for the controller.
 	vga_adapter VGA(
 			.resetn(SW[0]),
