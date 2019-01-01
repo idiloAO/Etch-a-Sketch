@@ -69,8 +69,7 @@ module fill
 		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
 		defparam VGA.BACKGROUND_IMAGE = "black.mif";
 			
-	// Put your code here. Your code should produce signals x,y,colour and writeEn
-	// for the VGA controller, in addition to any other functionality your design may require.
+	
 	control u1 (.clock(CLOCK_50), 
 					.resetn(SW[0]), 
 					.key_in(~KEY[3:0]), // too out negate 
@@ -212,7 +211,7 @@ always @(*)
 		case (current_state)
 			S_BLACK: begin 
 				move = 1'b0;
-				//pixel <= pixel + 1'b1; does it draw a pixel???
+				//pixel <= pixel + 1'b1; 
 			end
 			S_MOVE: begin
 				move = 1'b1;
@@ -235,7 +234,7 @@ always @(*)
 			end
 		else
 			begin
-         current_state <= next_state; //took out begin and end here
+         current_state <= next_state; 
 			end
 	end
 	
