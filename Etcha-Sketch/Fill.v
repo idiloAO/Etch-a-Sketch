@@ -308,7 +308,8 @@ always @(*)
 	xpos = originalX + xcount; 
 	ypos = originalY + ycount; 
 	end
-		
+	
+	
 endmodule 
 
 module RateDivider4 (q,clock);
